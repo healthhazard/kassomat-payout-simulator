@@ -19,6 +19,9 @@ public class KassomatJson {
 	public String cc;
 	public String channel;
 	public String channels;
+	public Integer note5ok;
+	public Integer note10ok;
+	public Integer note20ok;
 
 	public LevelJson[] levels;
 

@@ -264,6 +264,18 @@ public class PayoutSimMain {
 					
 				case "enable":
 					break;
+				
+				case "z-test-all-coin-changes": {
+					response.result = "ok";
+					response.note5ok = Utils.testPayout(500,
+							hopperMonies) == PayoutResult.OK ? 1 : 0;
+					response.note10ok = Utils.testPayout(1000,
+							hopperMonies) == PayoutResult.OK ? 1 : 0;
+					response.note20ok = Utils.testPayout(2000,
+							hopperMonies) == PayoutResult.OK ? 1 : 0;;
+					kassomat.pubHopperResponse(response);
+					break;
+				}
 					
 				default:
 					System.out.println("unknown command: '" + cmd.cmd + "'");

@@ -963,6 +963,8 @@ public class PayoutFrame extends javax.swing.JFrame {
 		m.setAmount(4, Integer.parseInt(textField11.getText()));
 		m.setAmount(5, Integer.parseInt(textField12.getText()));
 		
+		kassomat.getHopperMonies().getMoneyChange().notifyObservers();
+		repaint();
 	}// GEN-LAST:event_jButton7ActionPerformed
 
 	private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton6ActionPerformed
